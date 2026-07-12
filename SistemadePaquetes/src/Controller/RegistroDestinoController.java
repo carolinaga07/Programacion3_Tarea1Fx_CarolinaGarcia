@@ -1,9 +1,12 @@
 package Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import utils.ArchivoUtil;
 
 public class RegistroDestinoController {
 
@@ -18,5 +21,23 @@ public class RegistroDestinoController {
 
     @FXML
     private Label lblMensaje2;
+
+    @FXML
+    private TextField txtNombreDestino;
+
+    @FXML
+    void guardarDestino() {
+
+        String nombreDestino = txtNombreDestino.getText();
+
+        if(nombreDestino.isEmpty()){
+            lblMensaje2.setText(" Ingrese un destino para guardar.");
+        }else{
+            ArchivoUtil.guardarDestino(nombreDestino);
+            lblMensaje2.setText("Materia guardada en archivo: " + nombreDestino);
+            txtNombreDestino.clear();
+        }
+
+    }
 
 }
