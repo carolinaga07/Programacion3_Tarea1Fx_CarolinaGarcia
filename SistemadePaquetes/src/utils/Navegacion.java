@@ -1,7 +1,6 @@
 package utils;
 
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -20,6 +19,7 @@ public class Navegacion {
             stage.show();
 
             return loader.getController();
+
         } catch (Exception e) {
 
             throw new RuntimeException("Error al abrir la ventana:" + rutaFXML, e);
