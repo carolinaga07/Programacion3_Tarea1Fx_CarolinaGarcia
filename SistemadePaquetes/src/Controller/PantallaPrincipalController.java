@@ -21,7 +21,7 @@ public class PantallaPrincipalController {
 
     @FXML
     private void abrirConsultaDestinos() {
-        
+
         ConsultaDestinoController controller = Navegacion.abrirVentana(
             "/view/Consulta_destino.fxml", 
             "Historial de Destinos ");
@@ -41,10 +41,18 @@ public class PantallaPrincipalController {
     @FXML
     void abrirRegistroDestino(ActionEvent event) {
 
+         ConsultaDestinoController controller = Navegacion.abrirVentana(
+            "/view/Registro_destino.fxml", 
+            "Registrar Destino");
+
     }
 
     @FXML
     void abrirRegistroPaquete(ActionEvent event) {
+
+         ConsultaDestinoController controller = Navegacion.abrirVentana(
+            "/view/Registro_paquete.fxml", 
+            "Registrar Paquetes");
 
     }
 
