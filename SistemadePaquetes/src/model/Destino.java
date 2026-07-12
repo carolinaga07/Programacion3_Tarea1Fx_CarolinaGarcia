@@ -16,6 +16,9 @@ public class Destino {
         Nombre = nombre;
     }
 
-    
+    @Override
+    public String toString(){
+        return Nombre;
+    }
     
 }

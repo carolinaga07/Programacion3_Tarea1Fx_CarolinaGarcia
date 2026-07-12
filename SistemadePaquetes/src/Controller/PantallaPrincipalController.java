@@ -42,7 +42,7 @@ public class PantallaPrincipalController {
     @FXML
     void abrirRegistroDestino(ActionEvent event) {
 
-         ConsultaDestinoController controller = Navegacion.abrirVentana(
+         RegistroDestinoController controller = Navegacion.abrirVentana(
             "/view/Registro_destino.fxml", 
             "Registrar Destino");
 

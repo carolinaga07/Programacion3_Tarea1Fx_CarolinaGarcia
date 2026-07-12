@@ -16,9 +16,9 @@
       </Label>
       <Label layoutX="28.0" layoutY="59.0" text="Nombre del Destino" />
       <TextField fx:id="txtNombreDestino" layoutX="28.0" layoutY="85.0" />
-      <Button fx:id="btnGuardarArchivo" layoutX="44.0" layoutY="128.0" mnemonicParsing="false" text="Guardar en archivo" />
+      <Button fx:id="btnGuardarArchivo" layoutX="44.0" layoutY="128.0" mnemonicParsing="false" onAction="#guardarDestino" text="Guardar en archivo" />
       <Button fx:id="btnCargarArchivo" layoutX="39.0" layoutY="178.0" mnemonicParsing="false" text="Cargar desde archivo" />
-      <Label fx:id="lblMensaje2" layoutX="325.0" layoutY="239.0" text="Mensaje" />
+      <Label fx:id="lblMensaje2" layoutX="138.0" layoutY="240.0" text="Mensaje" />
       <ListView fx:id="LVDestino" layoutX="209.0" layoutY="51.0" prefHeight="173.0" prefWidth="277.0" />
    </children>
 </AnchorPane>
