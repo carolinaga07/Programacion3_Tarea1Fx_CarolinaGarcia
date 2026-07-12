@@ -14,11 +14,11 @@
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Registro de Paquetes" />
-              <MenuItem mnemonicParsing="false" text="Registro de Destinos" />
-                  <MenuItem mnemonicParsing="false" text="Consulta de Paquetes" />
-                  <MenuItem mnemonicParsing="false" text="Consulta de destinos" />
-                  <MenuItem mnemonicParsing="false" text="Salir" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirRegistroPaquete" text="Registro de Paquetes" />
+              <MenuItem mnemonicParsing="false" onAction="#abrirRegistroDestino" text="Registro de Destinos" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirConsultaPaquete" text="Consulta de Paquetes" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consulta de destinos" />
+                  <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Procesos">
