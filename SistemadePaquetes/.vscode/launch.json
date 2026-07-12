@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "SistemadePaquetes_b9b8c7c6",
-            "vmArgs": "--module-path C://javafx-sdk-25.0.3//lib --add-Modules java.control,java.fxml"
+            "vmArgs": "--module-path C://javafx-sdk-25.0.3//lib --add-modules javafx.control,javafx.fxml"
         },
       
     ]
