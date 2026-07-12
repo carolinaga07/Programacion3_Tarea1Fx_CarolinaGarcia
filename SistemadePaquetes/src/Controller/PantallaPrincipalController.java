@@ -3,6 +3,7 @@ package Controller;
 import utils.Navegacion;
 import model.Destino;
 import utils.ArchivoUtil;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -58,7 +59,8 @@ public class PantallaPrincipalController {
 
     @FXML
     void salir(ActionEvent event) {
-
+        Platform.exit();
     }
 
+   
 }

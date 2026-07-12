@@ -9,10 +9,10 @@ public class Paquete {
 
 
     public Paquete(String codigo, String destinatario, double peso, String destino) {
-        Codigo = codigo;
-        Destinatario = destinatario;
-        Peso = peso;
-        Destino = destino;
+        this.Codigo = codigo;
+        this.Destinatario = destinatario;
+        this.Peso = peso;
+        this.Destino = destino;
     }
 
 

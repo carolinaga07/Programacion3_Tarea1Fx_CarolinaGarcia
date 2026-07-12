@@ -21,7 +21,7 @@
       <ProgressBar fx:id="ProgressBar" layoutX="103.0" layoutY="237.0" prefWidth="200.0" progress="0.0" />
       <Label fx:id="lbl_mensaje" layoutX="189.0" layoutY="210.0" text="Mensaje" />
       <ComboBox fx:id="cmbDestino" layoutX="217.0" layoutY="72.0" onAction="#initialize" prefWidth="150.0" />
-      <Button fx:id="btnGuardarAchivoP" layoutX="235.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Guardar en Archivo" />
+      <Button fx:id="btnGuardarAchivoP" layoutX="235.0" layoutY="114.0" mnemonicParsing="false" onAction="#guardarConHilo" prefHeight="25.0" prefWidth="121.0" text="Guardar en Archivo" />
       <Button fx:id="btncargarDestino" layoutX="246.0" layoutY="152.0" mnemonicParsing="false" text="Cargar destinos" />
       <TextField fx:id="txtCodigo" layoutX="23.0" layoutY="65.0" />
       <TextField fx:id="txtDestinatario" layoutX="23.0" layoutY="114.0" />

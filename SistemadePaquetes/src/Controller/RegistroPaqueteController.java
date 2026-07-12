@@ -1,5 +1,6 @@
 package Controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,6 +8,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import model.Paquete;
+import utils.ArchivoUtil;
 
 public class RegistroPaqueteController {
 
@@ -35,8 +38,64 @@ public class RegistroPaqueteController {
     private TextField txtPeso;
 
     @FXML
-    void initialize(ActionEvent event) {
+    void initialize() {
+        cmbDestino.getItems().addAll(
+            "Santiago",
+            "San Francisco",
+            "Tenares"
+        );
 
+    }
+
+     @FXML
+    void guardarConHilo() {
+
+        Paquete paquete = crearPaquete();
+        lbl_mensaje.setText("Guardando en segundo plano ....");
+        ProgressBar.setProgress(0);
+
+        Thread hilo = new Thread(() -> {
+            try {
+                for(int i = 1; i <= 10; i++){
+                    Thread.sleep(300);
+                    int progreso = i;
+
+                    Platform.runLater(()-> {
+                        ProgressBar.setProgress(progreso/10.0);
+                        lbl_mensaje.setText("Guardando..." + (progreso * 10) + "%");
+                    });
+                }
+                ArchivoUtil.guardarPaquete(paquete);
+                Platform.runLater(() -> {
+                    lbl_mensaje.setText("Paquete guardado en el archivo con hilo!!");
+                });
+            } catch (Exception e) {
+               System.out.println("Error al guardar el paquete:" + e.getMessage());
+            }finally{
+                ProgressBar.setProgress(0);
+                lbl_mensaje.setText("Paquete guardado en el archivo");
+            }
+
+        });
+
+        hilo.start();
+
+    }
+
+    private Paquete crearPaquete(){
+        String destino = cmbDestino.getValue();
+        double peso = Double.parseDouble(txtPeso.getText());
+
+        if(destino == null){
+            destino = "Sin destino";
+        }
+
+        return new Paquete(
+            txtCodigo.getText(),
+            txtDestinatario.getText(),
+            peso,
+            destino
+        );
     }
 
 }
