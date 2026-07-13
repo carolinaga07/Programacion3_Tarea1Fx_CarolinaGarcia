@@ -14,15 +14,15 @@
             <Font name="Baskerville Old Face" size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="52.0" layoutY="62.0" prefHeight="176.0" prefWidth="302.0">
+      <TableView fx:id="tablaPaquete" layoutX="52.0" layoutY="62.0" prefHeight="176.0" prefWidth="302.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Codigo" />
-          <TableColumn prefWidth="75.0" text="Destinario" />
-            <TableColumn prefWidth="75.0" text="Peso" />
-            <TableColumn prefWidth="75.0" text="Destino" />
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colDestinatario" prefWidth="75.0" text="Destinatario" />
+            <TableColumn fx:id="colPeso" prefWidth="75.0" text="Peso" />
+            <TableColumn fx:id="colDestino" prefWidth="75.0" text="Destino" />
         </columns>
       </TableView>
-      <Button fx:id="btnCargarArchivo2" layoutX="242.0" layoutY="252.0" mnemonicParsing="false" text="Cargar desde Archivo" />
-      <Label fx:id="lblMensaje3" layoutX="52.0" layoutY="256.0" text="Mensaje" />
+      <Button fx:id="btnCargarArchivo2" layoutX="242.0" layoutY="252.0" mnemonicParsing="false" onAction="#cargarPaquetes" text="Cargar desde Archivo" />
+      <Label fx:id="lblMensaje3" layoutX="76.0" layoutY="256.0" text="Mensaje" />
    </children>
 </AnchorPane>

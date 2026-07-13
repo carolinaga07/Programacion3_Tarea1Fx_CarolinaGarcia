@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import model.Destino;
 import model.Paquete;
 
 public class ArchivoUtil {
@@ -63,6 +64,30 @@ public class ArchivoUtil {
         }
 
         return paquetes;
+    }
+
+
+    public static ArrayList<Destino> leerListaDestino(){
+        ArrayList<Destino> destinos = new ArrayList<>();
+        try {
+            FileReader archivo = new FileReader("Destino.txt");
+            BufferedReader lector = new BufferedReader(archivo);
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+        
+                    Destino destino = new Destino(linea);
+                    destinos.add(destino);
+           
+                
+            }
+
+            lector.close();
+            archivo.close();
+        } catch (IOException e) {
+            System.out.println("No se pudo leer el destino: " + e.getMessage());
+        }
+
+        return destinos;
     }
     
 }
