@@ -40,7 +40,7 @@ public class RegistroPaqueteController {
     private TextField txtPeso;
 
     @FXML
-    void initialize() {
+    public void initialize() {
         cmbDestino.getItems().addAll( ArchivoUtil.leerListaDestino());
 
     }
@@ -102,8 +102,9 @@ public class RegistroPaqueteController {
          ObservableList<Destino> lista = FXCollections.observableArrayList(
             ArchivoUtil.leerListaDestino()
         );
-
-        cmbDestino.setItems(lista);
+  
+        cmbDestino.getItems().clear();
+        cmbDestino.getItems().addAll(lista);
 
     }
 

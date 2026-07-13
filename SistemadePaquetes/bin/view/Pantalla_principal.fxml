@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -22,20 +23,22 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Procesos">
             <items>
-              <MenuItem mnemonicParsing="false" text="Demostrar uso de Thread y Platform.runLater" />
+              <MenuItem mnemonicParsing="false" onAction="#demostrarHilo" text="Demostrar uso de Thread y Platform.runLater" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <Label fx:id="lbl_titulo" layoutX="40.0" layoutY="26.0" prefHeight="84.0" prefWidth="356.0" text="Paqueteria &quot;La lechuza&quot;" textFill="#1f447d">
+      <Label fx:id="lbl_titulo" layoutX="40.0" layoutY="14.0" prefHeight="84.0" prefWidth="356.0" text="Paqueteria &quot;La lechuza&quot;" textFill="#1f447d">
          <font>
             <Font name="Javanese Text" size="30.0" />
          </font>
       </Label>
-      <Label fx:id="lbl_pregunta" layoutX="127.0" layoutY="110.0" text="¿Cual es tu solicitud?">
+      <Label fx:id="lbl_pregunta" layoutX="128.0" layoutY="90.0" text="¿Cual es tu solicitud?">
          <font>
             <Font name="Franklin Gothic Book" size="13.0" />
          </font>
       </Label>
+      <ProgressBar fx:id="ProgressBar" layoutX="87.0" layoutY="121.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="lblEstado" layoutX="87.0" layoutY="147.0" text="Mensaje" />
    </children>
 </AnchorPane>
