@@ -2,3 +2,4 @@ EA123;Carolina;2.4;Sin destino
 AE087;Monnie;6.0;Tenares
 DEA0392;Mochi;3.0;San Francisco
 ED2932;Maria;5.7;Santiago
+ESD09;Dylan Manuel;6.0;Villa Tapia

@@ -39,6 +39,6 @@
          </font>
       </Label>
       <ProgressBar fx:id="ProgressBar" layoutX="87.0" layoutY="121.0" prefWidth="200.0" progress="0.0" />
-      <Label fx:id="lblEstado" layoutX="87.0" layoutY="147.0" text="Mensaje" />
+      <Label fx:id="lblEstado" layoutX="32.0" layoutY="147.0" text="Mensaje" />
    </children>
 </AnchorPane>

@@ -85,7 +85,7 @@ public class PantallaPrincipalController {
 
                     Platform.runLater(()-> {
                         ProgressBar.setProgress(progreso/10.0);
-                        lblEstado.setText("Thread trabaja en segundo plano, Plataform.runLater actualiza la GUI: " + (progreso * 10) + "%");
+                        lblEstado.setText("Plataform.runLater actualiza la GUI: " + (progreso * 10) + "%");
                     });
                 }
             
