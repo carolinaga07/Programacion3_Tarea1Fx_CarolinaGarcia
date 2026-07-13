@@ -37,7 +37,7 @@ public class ConsultaPaqueteController {
 
     @FXML
     public void initialize(){
-        colCodigo.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 
         colDestinatario.setCellValueFactory(new PropertyValueFactory<>("destinatario"));
 
@@ -57,8 +57,9 @@ public class ConsultaPaqueteController {
 
         tablaPaquete.setItems(lista);
 
-
-
     }
+
+    
+
 
 }

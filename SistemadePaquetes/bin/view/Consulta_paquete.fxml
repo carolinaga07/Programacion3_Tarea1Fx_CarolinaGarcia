@@ -22,7 +22,6 @@
             <TableColumn fx:id="colDestino" prefWidth="75.0" text="Destino" />
         </columns>
       </TableView>
-      <Button fx:id="btnCargarArchivo2" layoutX="242.0" layoutY="252.0" mnemonicParsing="false" onAction="#cargarPaquetes" text="Cargar desde Archivo" />
-      <Label fx:id="lblMensaje3" layoutX="76.0" layoutY="256.0" text="Mensaje" />
+      <Button fx:id="btnCargarArchivo2" layoutX="138.0" layoutY="251.0" mnemonicParsing="false" onAction="#cargarPaquetes" text="Cargar desde Archivo" />
    </children>
 </AnchorPane>

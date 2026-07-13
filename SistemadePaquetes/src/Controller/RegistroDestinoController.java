@@ -1,6 +1,9 @@
 package Controller;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -35,7 +38,7 @@ public class RegistroDestinoController {
             lblMensaje2.setText(" Ingrese un destino para guardar.");
         }else{
             ArchivoUtil.guardarDestino(nombreDestino);
-            lblMensaje2.setText("Materia guardada en archivo: " + nombreDestino);
+            lblMensaje2.setText("Destino guardado en archivo: " + nombreDestino);
             txtNombreDestino.clear();
         }
 
@@ -46,5 +49,18 @@ public class RegistroDestinoController {
     public void initialize(){
         LVDestino.getItems().addAll(ArchivoUtil.leerListaDestino());
     }
+
+
+    @FXML
+    private void CargarDestino() {
+
+        ObservableList<Destino> lista = FXCollections.observableArrayList(
+            ArchivoUtil.leerListaDestino()
+        );
+
+        LVDestino.setItems(lista);
+
+    }
+
 
 }

@@ -1,13 +1,15 @@
 package Controller;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import model.Destino;
 import model.Paquete;
 import utils.ArchivoUtil;
 
@@ -23,7 +25,7 @@ public class RegistroPaqueteController {
     private Button btncargarDestino;
 
     @FXML
-    private ComboBox<String> cmbDestino;
+    private ComboBox<Destino> cmbDestino;
 
     @FXML
     private Label lbl_mensaje;
@@ -39,11 +41,7 @@ public class RegistroPaqueteController {
 
     @FXML
     void initialize() {
-        cmbDestino.getItems().addAll(
-            "Santiago",
-            "San Francisco",
-            "Tenares"
-        );
+        cmbDestino.getItems().addAll( ArchivoUtil.leerListaDestino());
 
     }
 
@@ -83,19 +81,30 @@ public class RegistroPaqueteController {
     }
 
     private Paquete crearPaquete(){
-        String destino = cmbDestino.getValue();
-        double peso = Double.parseDouble(txtPeso.getText());
+        Destino destino = cmbDestino.getValue();
+        String nombreDestino = "Sin destino";
 
-        if(destino == null){
-            destino = "Sin destino";
+        if(destino != null){
+           nombreDestino = destino.getNombre();
         }
 
         return new Paquete(
             txtCodigo.getText(),
             txtDestinatario.getText(),
-            peso,
-            destino
+            Double.parseDouble(txtPeso.getText()),
+            nombreDestino
         );
+    }
+
+    @FXML
+    void cargarDestino() {
+
+         ObservableList<Destino> lista = FXCollections.observableArrayList(
+            ArchivoUtil.leerListaDestino()
+        );
+
+        cmbDestino.setItems(lista);
+
     }
 
 }
